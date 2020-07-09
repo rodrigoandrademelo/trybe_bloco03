@@ -10,14 +10,43 @@
     <style> /* CSS */ 
         body 
             {
-            background-color: rgb(151, 151, 155);
-            color: black;
-            font: normal 20pt Arial;
+                background-color: rgb(151, 151, 155);
+                color: black;
+                font: normal 20pt Arial;
             }
-        h1
+        #nome
             {
-
+                color: rgb(53, 37, 37);
+                font: normal 20pt Arial;
             }
+        #local
+            {
+                color: rgb(53, 37, 37);
+                font: normal 20pt Arial;
+                font-style: italic;
+            }
+        #sobre
+            {
+                color: rgb(53, 37, 37);
+                font: normal 20pt sans-serif;
+            }
+        .lh01
+            {
+                font-size: 2.5em;
+            }
+        .lh02
+            {
+                font-size:  2em;
+            }
+        .lh03
+            {
+                font-size: 1.5em;
+            }
+        .lh04
+            {
+                font-size: 1em;
+            }
+
 
     </style>
 
@@ -25,31 +54,36 @@
 <body>
     <h1>Portfólio</h1>
     <h2>Bem vindo!</h2>
-    <h2>Me chamo Fulano Beltrano e é um prazer!</h2>
-    
-    <img id="fotoperfil" src="???" alt="foto de um boneco de pauzim" width: 100px>
+    <h2 id="nome">Me chamo Fulano Beltrano e é um prazer!</h2>
+<br><br><br>
 
-    <p id="sobre" >Sou natural do país Patria, nasci e vivi sempre na cidade Pacata no estado Tranquilo.</p>
-    <p>Durante minha vida adquiri alguns<strong> conhecimentos relevantes</strong> que irei citar abaixo:</p>
+    <img id="fotoperfil" src="data:image/png;base64,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" alt="foto de um boneco de pauzim" width: 100px>
+<br><br><br>
+
+    <p id="local" >Sou natural do país Patria, nasci e vivi sempre na cidade Pacata no estado Tranquilo.</p>
+    <p id="sobre">Durante minha vida adquiri alguns<strong> conhecimentos relevantes</strong> que irei citar abaixo:</p>
+<br><br><br>
 
     <ul id="listahabilidade">
-        <li><strong>Habilidade 01</strong></li>
-        <li>Habilidade 02</li>
-        <li>Habilidade 03</li>
-        <li>Habilidade 04</li>
+        <li class="lh01"><strong>Habilidade 01</strong></li>
+        <li class="lh02">Habilidade 02</li>
+        <li class="lh03">Habilidade 03</li>
+        <li class="lh04">Habilidade 04</li>
     </ul>
-    
+<br><br><br>
+
     <p><a href="#fotoperfil">Olhe para mim mais uma vez!<br> :) </p></a> 
+<br><br><br>
 
     <p><em><a target="_blank" href="https://www.google.com.br/">Um pocuo mais sobre mim...</a></em></p>
-
+<br><br><br>
 
     <ul id="listafim">
         <li><a href="#fotoperfil">Foto</a></li>
         <li><a href="#sobre">Sobre eu</a></li>
         <li><a href="#listahabilidade">Habilidades</a></li>
     </ul>
-
+<br><br><br>
 
 
 </body>
